@@ -2,7 +2,133 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    /* Reset básico e fontes */
+    body, h1, h2, p, a {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Background geral com degradê verde */
+    body {
+        background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    /* Barra de navegação */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .navbar .logo h2 {
+        font-size: 1.8rem;
+    }
+    .navbar .menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-left: 20px;
+        transition: color 0.3s;
+    }
+    .navbar .menu a:hover {
+        color: #D4EFDF;
+    }
+
+    /* Seção Hero */
+    .hero {
+        text-align: center;
+        padding: 150px 20px;
+    }
+    .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease-in-out;
+    }
+    .hero p {
+        font-size: 1.5rem;
+        animation: fadeInUp 1s ease-in-out;
+    }
+ 
+
+    /* Cards informativos */
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 50px 20px;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    .card h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .card p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.2);
+        font-size: 0.9rem;
+    }
+</style>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <h2>UnaMed</h2>
+    </div>
+    <div class="menu">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </div>
+</nav>
+
+<!-- Seção Hero -->
+<div class="hero">
+    <h1>Bem Vindo ao UnaMed</h1>
+    <p>Conectando você aos melhores profissionais de saúde com confiança e inovação.</p>
 </div>
+
+<!-- Cards Informativos -->
+<div class="cards">
+    <div class="card">
+        <h2>Profissionais Qualificados</h2>
+        <p>Descubra uma seleção de médicos especializados e comprometidos com a excelência no atendimento.</p>
+    </div>
+    <div class="card">
+        <h2>Processo Simplificado</h2>
+        <p>Encontre e contrate profissionais de forma rápida e intuitiva, sem complicações.</p>
+    </div>
+    <div class="card">
+        <h2>Atendimento Seguro</h2>
+        <p>Garantia de segurança e confiança em cada etapa do seu atendimento.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 UnaMed. Todos os direitos reservados.</p>
+</footer>
